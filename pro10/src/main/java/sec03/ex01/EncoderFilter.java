@@ -1,9 +1,9 @@
 package sec03.ex01;
 
 import java.io.IOException;
+
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
-import javax.servlet.FilterConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
@@ -14,10 +14,11 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * Servlet Filter implementation class EncodingFilter
  */
-@WebFilter("/*")
-public class EncodingFilter extends HttpFilter implements Filter {
+
+@WebFilter("/a")
+public class EncoderFilter extends HttpFilter implements Filter {
        
-    public EncodingFilter() {
+    public EncoderFilter() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -41,5 +42,6 @@ public class EncodingFilter extends HttpFilter implements Filter {
 		long end = System.currentTimeMillis();
 		System.out.println("작업시간 : "+ (end-begin) + "ms");
 	}
-
 }
+
+
