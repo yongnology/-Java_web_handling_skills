@@ -119,3 +119,35 @@ session     : 같은 브라우저에서 공유
 application : 같은 애플리케이션에서 공유
 
 ----------------------------------------------
+
+12.8 JSP 페이지 예외 처리하기
+
+■ JSP 에서 예외 처리 페이지 만든는 과정
+
+1) 예외 처리 담당 jsp를 만든다.
+<%@ page isErrorPage='true' %>
+
+2) 예외 발생 시 예외 처리 담당 JSP 파일을 지정한다.
+<%@ page errorPage='addException.jsp' %>
+
+■ 예외 코드드에 따른 예외 페이지 과정
+- 전체 JSP 페이지에 대해 발생하는 오류에 대해서 화면에 표시되는 각각의 예외 처리 JSP 페이지를 지정한다.
+
+■ web.xml에 지정하는 방법
+<error-page>
+    <error-code>에러코드</error-code>
+    <location>오류 페이지 위치</location>
+</errorPage>
+
+■ 만약 한 개의 JSP 페이지에 페이지 디렉티브의 errorPage 속성과 web.xml이 같이 지정되어 있으면
+    페이지 디렉티브의 errorPage가 우선적으로 나타난다.
+
+12.9 JSP welcome 파일 지정하기
+
+■ web.xml에서 주소를 기입하면 홈페이지로 사용할 수 있다.
+    <welcome-file-list>
+        <welcome-file>주소</welcome>
+        <welcome-file>주소</welcome>
+    </welcome-file-list>
+
+----------------------------------------------
