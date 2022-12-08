@@ -198,3 +198,17 @@ search.jsp 에서 검색 폼 -- 이름 전달
     </JSP:forward>
 
 ----------------------------------------------
+
+13.3 useBean, setProperty, getProperty 액션 태그 사용하기
+
+■ 자바 빈(Bean)
+- java EE 프로그래밍 시 여러 객체를 거치면서 만들어지는 데이터를 저장하거나 전달하는데 사용되는 클래스
+- 자바의 DTO(Data Transfer Object, 데이터 전송 객체) 클래스, VO(Value Class, 값 객체) 클래스와 같은 개념
+
+■ 자바 빈(Bean) 특징
+- 속성의 접근 제한자는 private 이다.
+- 각 속성(attribute, property)은 각각의 setter/getter를 가진다.
+- setter/getter 이름의 첫 글자는 반드시 소문자여야 한다.
+- 인자 없는 생성자를 반드시 가지며 다른 생성자도 추가할 수 있다.
+
+----------------------------------------------
