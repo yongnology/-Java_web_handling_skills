@@ -223,4 +223,7 @@ search.jsp 에서 검색 폼 -- 이름 전달
 ■ getProperty   | useBean의 속성 값을 얻는  태그 |
     <jsp:getProperty name="자바 빈 이름" property="속성 이름" />
 
+■ <jsp:param> 액션 태그는 <include>액션 태그와
+  <forward> 액션 태그 사용 시 다른 JSP로 매개변수 값을 전송할 때 사용
+
 ----------------------------------------------
