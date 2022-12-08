@@ -217,4 +217,10 @@ search.jsp 에서 검색 폼 -- 이름 전달
 ■ 유즈빈 액션 태그 형식
     <jsp:useBean id= "빈 이름" class="패키지 이름을 포함한 자바 빈 클래스 이름" [scope="접근범위"]/>
 
+■ setProperty   | useBean의 속성에 값을 설정 |
+    <jsp:setProperty name="자바 빈 이름" property="속성 이름" value="값"/>
+
+■ getProperty   | useBean의 속성 값을 얻는  태그 |
+    <jsp:getProperty name="자바 빈 이름" property="속성 이름" />
+
 ----------------------------------------------
