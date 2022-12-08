@@ -245,3 +245,33 @@ search.jsp 에서 검색 폼 -- 이름 전달
     ${표현식 or 값}
 
 ----------------------------------------------
+
+14.2 표현 언어 내장 객체(내장 변수)
+
+■ 여러 가지 내장 객체
+스코프   | pageScope        | JSP의 page와 같은 기능, page 영역에 바인딩된 객체를 참조
+        | requestScope      | JSP의 request와 같은 기능을 하고 request에 바인딩된 객체를 참조
+        | sessionScope      | JSP의 session과 같은 기능을 하고 session에 바인딩된 객체를 참조
+        | applicationScope | JSP의 application과 같은 기능을 하고 application에 바인딩된 객체를 참조
+---------------------------
+
+요청  매개변수   | param        | request.getParameter() 메소드를 호출한 것과 같으며,
+                               | 한 개의 값을 전달하는 요청 매개변수를 처리
+                | paramValues  | request.getParameterValues() 메소드를 호출한 것과 같으며,
+                               | 여러 개의 값을 전달하는 요청 매개변수를 처리
+---------------------------
+
+헤더 값  | header       | request.getHeader() 메소드를 호출한 것과 같으며 요청 헤더 이름의 정보를 단일 값으로 반환
+        | headerValues  | request.getHeader() 메소드를 호출한 것과 같으며 요청 헤더 이름의 정보를 배열로 반환
+---------------------------
+
+쿠키값        | Cookies       | 쿠키 이름의 값을 반환
+---------------------------
+
+JSP 내용      | pageContext  | pageContext 객체를 참조할 때 사용
+---------------------------
+
+초기 매개변수 | initParam  | 컨텍스트의 초기화 매개변수 이름의 값을 반환
+---------------------------
+
+----------------------------------------------
