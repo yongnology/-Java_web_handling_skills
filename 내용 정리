@@ -278,4 +278,7 @@ JSP 내용      | pageContext  | pageContext 객체를 참조할 때 사용
 - request 객체에 바인딩된 데이터에 접근할 수 있다.
 - session이나 application 객체에 바인딩된 데이터는 sessionScope나 applicationScope로 접근할 수 있다.
 
+■ Collection 객체 사용
+    ${Collection 객체이름[index].속성이름}
+
 ----------------------------------------------
