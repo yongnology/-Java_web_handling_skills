@@ -12,7 +12,7 @@ h1 {
 </style>
 </head>
 <body>
-<form method="post" action="forward1.jsp">
+<form method="post" action="member3.jsp">
 	<h1>회원 가입창</h1>
 	<table align="center">
 		<tr>
