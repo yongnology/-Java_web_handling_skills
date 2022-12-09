@@ -281,4 +281,7 @@ JSP 내용      | pageContext  | pageContext 객체를 참조할 때 사용
 ■ Collection 객체 사용
     ${Collection 객체이름[index].속성이름}
 
+■ HashMap 사용
+    ${HashMap객체이름.키이름}
+
 ----------------------------------------------
