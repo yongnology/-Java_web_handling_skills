@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +12,7 @@ h1 {
 </style>
 </head>
 <body>
-<form method="post" action="member1.jsp">
+<form method="post" action="forward1.jsp">
 	<h1>회원 가입창</h1>
 	<table align="center">
 		<tr>

@@ -274,4 +274,8 @@ JSP 내용      | pageContext  | pageContext 객체를 참조할 때 사용
 초기 매개변수 | initParam  | 컨텍스트의 초기화 매개변수 이름의 값을 반환
 ---------------------------
 
+■ requestScope를 사용하면
+- request 객체에 바인딩된 데이터에 접근할 수 있다.
+- session이나 application 객체에 바인딩된 데이터는 sessionScope나 applicationScope로 접근할 수 있다.
+
 ----------------------------------------------
