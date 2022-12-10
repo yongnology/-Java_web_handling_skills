@@ -291,3 +291,36 @@ JSP 내용      | pageContext  | pageContext 객체를 참조할 때 사용
     ${부모이름.자식속성이름.속성이름}
 
 ----------------------------------------------
+
+14.3 표현 언어로 바인딩 속성 출력하기
+
+표현언어를 사용하면 자바 코드를 사용하지 않고
+바인딩된 속성 이름으로 바로 값을 출력할 수 있다.
+
+ex)
+1) request.setAttribute("id", "hong");
+    ---> <jsp:forward page="포워드 페이지.jsp"/> --->
+    String id = (String)request.getAttribute("id");
+
+    표현식              : <%= id%>
+    바인딩 된 속성이름  : ${id}
+
+2) MemberBean member = new MemberBean("lee", "1234");
+    request.setAttribute("member", member);
+     ---> <jsp:forward page="포워드 페이지.jsp"/> --->
+
+    // 바인딩 시 속성으로 각각의 MemberBean 속성에 접근하여 출력
+    ${member.id}
+    ${member.pwd}
+
+3) List membersList = new ArrayList();
+    MemberBean m1 = new MemberBean("lee", "1234");
+    membersList.add(m1);
+    request.setAttribute("membersList", membersList);
+    ---> <jsp:forward page="포워드 페이지.jsp"/> --->
+
+    // 표현 언어에서 속성 이름으로 ArrayList에 접근한 후 인덱스를 이용해 첫 번째 회원 정보 출력
+    ${membersList[0].id}
+    ${membersList[0].pwd}
+
+----------------------------------------------
