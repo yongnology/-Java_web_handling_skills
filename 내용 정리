@@ -323,4 +323,7 @@ ex)
     ${membersList[0].id}
     ${membersList[0].pwd}
 
+■ 스코프 우선순위
+    page > request > session > application
+
 ----------------------------------------------
