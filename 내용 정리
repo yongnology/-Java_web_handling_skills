@@ -453,3 +453,32 @@ ex)
 ■ 
 
 ----------------------------------------------
+
+14.8 다국어 태그 라이브러리 사용하기
+
+■ 태그 라이브러리 종류
+<fmt:setLocale> : Locale(언어)을 저장
+<fmt:message>   : 지정한 언어에 해당하는 언어를 표시
+<fmt:setBundel> : 사용할 번들을 지정
+<fmt:setParam>  : 전달할 매개변수를 지정
+<fmt:requestEncoding>   : 요청 매개변수의 문자 인코딩을 지정
+
+----------------------------------------------
+
+14.9 한글을 아스키 코드로 변환하기
+
+Help > install New Software
+Name : [원하는 이름]
+Location : https://osdn.net/projects/propedit/storage/eclipse/updates/
+
+----------------------------------------------
+
+14.10 포매팅 태그 라이브러리 사용하기
+
+<fmt:timeZone>      : 지정한 국가의 시간을 지정하는 태그
+<fmt:setTimeZone>   : 지정한 국가의 시간을 지정하는 태그
+<fmt:formatNumber>  : 표시할 숫자의 형식을 지정
+<fmt:formatDate>    : 지정한 형식의 날짜를 표시
+
+
+----------------------------------------------
