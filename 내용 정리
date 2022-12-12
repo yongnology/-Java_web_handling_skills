@@ -480,5 +480,19 @@ Location : https://osdn.net/projects/propedit/storage/eclipse/updates/
 <fmt:formatNumber>  : 표시할 숫자의 형식을 지정
 <fmt:formatDate>    : 지정한 형식의 날짜를 표시
 
+----------------------------------------------
+
+4.11 문자열 처리 함수 사용하기
+
+fn:contain(A, B)    : 문자열 A에 문자열 B가 포함되어 있는지 확인
+fn:endWith(A, B)    : 문자열 A의 끝이 B로 끝나는지 확인
+fn:indexOf(A, B)    : 문자열 A에서 B가 처음으로 위치하는 인덱스(index)를 반환
+fn:length(A)        : 문자열 A의 전체 길이를 반환
+fn:replace(A, B, C) : 문자열 A에서 B까지 해당하는 문자를 찾아 C로 변환
+fn:toLowerCase(A)   : A를 모두 소문자로 변환
+fn:toUpperCase(A)   : A를 모두 대문자로 변환
+fn:substring(A, B, C): A에서 인덱스 번호 B~ C까지 해당하는 문자열을 반환
+fn:split(A, B)    : A에서 B기준(지정한 문자열)로 나누어 배열로 변환
+fn:trim(A)          : 문자열 A에서 아ㅠ뒤 공백을 제거
 
 ----------------------------------------------
