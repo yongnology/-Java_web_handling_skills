@@ -513,3 +513,15 @@ https://commons.apache.org/proper/commons-io/download_io.cgi
     <form>태그의 encType 속성은 반드시 multipart/form-data로 지정해야 한다.
 
 ----------------------------------------------
+
+15.2 JSP 에서 파일 다운로드
+
+1) first.jsp    : 파일 다운로드할 파일 이름을 매개변수로 전달
+2) result.jsp   : 다운로드할 파일 이름 가져오기
+3) FileDownload.java    :  download.do 서블릿으로
+    OutputStream 가져오기
+    버퍼를 만든 후
+    while 반복문을 이용해 파일에서 데이터를 한번에 8KB씩 버퍼에 읽어온다.
+    이어서 OutputStream의 write() 메소드를 이용해 다시 브라우저로 출력
+
+----------------------------------------------
