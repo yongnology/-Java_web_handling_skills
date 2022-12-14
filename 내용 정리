@@ -500,3 +500,16 @@ fn:trim(A)          : 문자열 A에서 아ㅠ뒤 공백을 제거
 14.12 표현 언어와 JSTL 을 이용한 회원 관리 실습
 
 ----------------------------------------------
+15장 JSP 페이지를 풍부하게 하는 오픈 소스 기능
+----------------------------------------------
+
+15.1 JSP에서 파일 업로드
+
+■ 라이브러리 다운로드
+https://commons.apache.org/proper/commons-fileupload/
+https://commons.apache.org/proper/commons-io/download_io.cgi
+
+※ 파일 업로드창에서 업로드 할 때는 
+    <form>태그의 encType 속성은 반드시 multipart/form-data로 지정해야 한다.
+
+----------------------------------------------
