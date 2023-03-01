@@ -761,3 +761,40 @@ https://repo.spring.io/ui/repos/tree/General/libs-release/org/springframework/sp
 여기서 스프링 라이브러리 다운 후 실행하니 정상 작동
 
 ----------------------------------------------
+21장 스프링 MVC 기능
+----------------------------------------------
+
+21.1 스프링 프레임워크 MVC의 특징
+
+■ 스프링에서 지원하는 MVC 기능의 특징
+- 모델2 아키텍처를 지원
+- 스프링과 다른 모듈과의 연계가 용이
+- 타일즈(tiles)나 사이트메시(sitemesh)같은 View 기술과의 연계가 용이
+- 태그 라이브러리를 통해 message 출력, theme 적용 그리고 입력 폼을 보다 쉽게 구현할 수 있다.
+
+■ 스프링 프레임워크 MVC 구성 요소
+- DispatcherServlet
+    : 클라이언트의 요청을 전달받아 해당 요청에 대한 컨트롤러를 선택하여 클라이언트의 요청을 전달
+- HandlerMapping
+    : 클라이언트가 요청한 URL을 처리할 컨트롤러를 지정
+- Controller
+    : 클라이언트의 요청을 처리한 후 그 결과를 DispatcherServlet에 전달
+- ModelAndView
+    : 컨트롤러가 처리한 결과 및 뷰 선택에 필요한 정보를 저장
+- ViewResolver
+    : 컨트롤러의 처리 결과를 전달할 뷰를 지정
+- View
+    : 컨트롤러의 처리 결과 화면을 생성
+
+■ 스프링 프레임워크 MVC 기능 수행 과정
+1. 브라우저가 DispatcherServlet에 URL을 접근하여 해당 정보를 요청
+2. 핸들러 매핑에서 해당 요청에 대해 매핑된 컨트롤러가 있는지 요청
+3. 매핑된 컨트롤러에 대해 처리를 요청
+4. 컨트롤러가 클라이언트의 요청을 처리한 결과와 View 이름을 ModelAndView에 저장해서
+   DispatcherServlet으로 반환
+5. DispatcherServlet 에서는 컨트롤러에서 보내온 View 이름을 ViewResolver로 보내 해당 View를 요청
+6. ViewResolver는 요청한 View를 보낸다.
+7. View 의 처리 결과를 DispatcherServlet으로 보낸다.
+8. DispatcherServlet은 최종 결과를 브라우저로 전송
+
+----------------------------------------------
