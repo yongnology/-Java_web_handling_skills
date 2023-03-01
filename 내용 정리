@@ -750,3 +750,14 @@ $("selector1, selector2, ...")  : 해당되는 선택자를 가지는 여러 DOM
 6. getBean() 메소드로 빈 객체에 접근해 사용
 
 ----------------------------------------------
+
+20.2.2 스프링 API를 이용한 AOP 기능 실습
+
+예제대로 하니 문제가 발생
+- 원인 : 자바 버전과 스프링 라이브러리 호환 문제.
+
+https://repo.spring.io/ui/repos/tree/General/libs-release/org/springframework/spring/5.3.9/spring-5.3.9-dist.zip
+
+여기서 스프링 라이브러리 다운 후 실행하니 정상 작동
+
+----------------------------------------------
