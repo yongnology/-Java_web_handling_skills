@@ -812,3 +812,28 @@ https://repo.spring.io/ui/repos/tree/General/libs-release/org/springframework/sp
     : 요청에 대해 컨트롤러가 브라우저로 전송하는 jsp
 
 ----------------------------------------------
+
+21.3 MultiActionController 이용해 스프링 MVC 실습하기
+
+■ 스프링 클래스들
+- MultiActionController
+    : URL 요청명으로 바로 컨트롤러를 지정해서 사용할 수 있다.
+- PropertiesMethodNameResolver
+    : URL 요청명으로 컨트롤러의 설정 파일에서 미리 설정된 메소드를 바로 호출해서 사용할 수 있다.
+- InternalResourceViewResolver
+    - JSP나 HTML 파일과 같이 웹 애플리케이션의 내부 자원을 이용해 뷰를 생성하는 기능을 제공.
+    - 기본적으로 사용하는 View 클래스이며 prefix와 suffix 프로터피를 이용해 경로를 지정할 수 있다.
+
+■ MultiActionController 에 사용되는 파일
+- web.xml
+    : 브라우저에서 *.do로 요청하면 DispatcherServlet 클래스가 요청을 받을 수 있게 서블릿 매핑을 설정
+- action-servlet.xml
+    : 스프링에서 필요한 빈들을 설정
+- UserController.java
+    : 매핑된 요청에 대해 컨트롤러의 기능을 수행
+- loginForm.jsp
+    : 로그인창
+- result.jsp
+    : 로그인 결과를 보여주는 JSP
+
+----------------------------------------------
