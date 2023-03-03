@@ -9,18 +9,22 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>결과창</title>
+<title>로그인 정보</title>
 </head>
 <body>
-<table border="1" align="center">
-	<tr align="center">
-		<td>아이디</td>
-		<td style="width:181px;">${id }</td>
-	</tr>
-	<tr align="center">
-		<td>비밀번호</td>
-		<td style="width:181px;">${pw }</td>
-	</tr>
+<table border="1" align="center" width="100%">
+<tr align="center" bgcolor="lightgreen">
+	<td><b>아이디</b></td>
+	<td><b>비밀번호</b></td>
+	<td><b>이름</b></td>
+	<td><b>이메일</b></td>
+</tr>
+<tr align="center">
+	<td>${id }</td>
+	<td>${pwd }</td>
+	<td>${name }</td>
+	<td>${email }</td>
+</tr>
 </table>
 </body>
 </html>
