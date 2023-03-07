@@ -837,3 +837,24 @@ https://repo.spring.io/ui/repos/tree/General/libs-release/org/springframework/sp
     : 로그인 결과를 보여주는 JSP
 
 ----------------------------------------------
+22장 스프링 JDBC 기능
+----------------------------------------------
+22.1 스프링 JDBC로 데이터베이스와 연동 설정하기
+
+■ 스프링에서 제공하는 JDBC 특징
+- 기존 JDBC의 장점과 단순함을 유지하면서 단점을 보완
+- 간결한 API뿐만 아니라 확장된 JDBC의 기능도 제공
+
+■ 스프링 JDBC 설정 파일들
+- web.xml
+    : ContextLoaderListener를 이용해 빈 설정 XML 파일들을 읽어 들인다.
+- action-servlet.xml
+    : 스프링에서 필요한 여러 가지 빈을 설정
+- action-dataSource.xml
+    : 스프링 JDBC 설정에 필요한 정보를 설정
+- jdbc.properties
+    : 데이터베이스 연결 정보를 저장
+- action-service.xml
+    : 서비스 빈 생성을 설정
+
+----------------------------------------------
