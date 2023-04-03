@@ -1,17 +1,15 @@
-package com.spring.ex01;
+package com.spring.ex02;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.List;
+import java.io.PrintWriter;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/mem.do")
+@WebServlet("/mem2.do")
 public class MemberServlet extends HttpServlet{
 	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		doHandle(req, res);
@@ -25,10 +23,16 @@ public class MemberServlet extends HttpServlet{
 		res.setCharacterEncoding("utf-8");
 		res.setContentType("text/html; charset=utf-8");
 		MemberDAO dao = new MemberDAO();
-		// List<MemberVO> membersList = dao.selectAllMemberList();
-		List<HashMap<String, String>> membersList = dao.selectAllMemberList();
-		req.setAttribute("membersList", membersList);
-		RequestDispatcher dispatch = req.getRequestDispatcher("test01/listMembers.jsp");
-		dispatch.forward(req, res);
+		
+		String name = dao.selectName();
+		int pwd = dao.selectPwd();
+		
+		PrintWriter pw = res.getWriter();
+		pw.write("<script>");
+		pw.write("alert(' 이름 : "+ name + "<br>");
+		pw.write("'비밀번호 : "+ pwd +"');");
+		
+		pw.write("</script>");
+		
 	}
 }

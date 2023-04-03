@@ -1,6 +1,7 @@
 package com.spring.ex01;
 
 import java.io.Reader;
+import java.util.HashMap;
 import java.util.List;
 
 import org.apache.ibatis.io.Resources;
@@ -26,12 +27,19 @@ public class MemberDAO {
 		return sqlMapper;
 	}
 	
-	public List<MemberVO> selectAllMemberList() {
-		sqlMapper = getInstance();
-		SqlSession session = sqlMapper.openSession();
-		List<MemberVO> memlist = null;
-		memlist = session.selectList("mapper.member.selectAllMemberList");
-		return memlist;
-	}
+//	public List<MemberVO> selectAllMemberList() {
+//		sqlMapper = getInstance();
+//		SqlSession session = sqlMapper.openSession();
+//		List<MemberVO> memlist = null;
+//		memlist = session.selectList("mapper.member.selectAllMemberList");
+//		return memlist;
+//	}
+	 public List<HashMap<String, String>> selectAllMemberList() { 
+		sqlMapper = getInstance(); 
+    	SqlSession session = sqlMapper.openSession();
+		List<HashMap<String, String>> memlist = null; 
+		memlist = session.selectList("mapper.member.selectAllMemberList"); 
+		return memlist; 
+	 }
 	
 }
