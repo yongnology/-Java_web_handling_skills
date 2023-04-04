@@ -1,6 +1,7 @@
 package com.spring.ex04;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -117,6 +118,26 @@ public class MemberServlet extends HttpServlet{
 				System.out.println("■■■■■■■■■■■■■■■■■■■■■■■ searchMember ■■■■■■■■■■■■■■■■■■■■■■■");
 				System.out.println(membersList);
 				nextPage="/test03/listMembers.jsp";
+			
+			} else if(action.equals("foreachSelect")) {
+				List<String> nameList = new ArrayList();
+				nameList.add("홍길동");
+				nameList.add("차범근");
+				nameList.add("이순신");
+				
+				List<MemberVO> membersList = dao.foreachSelect(nameList);
+				request.setAttribute("membersList", membersList);
+				nextPage= "test03/listMembers.jsp";
+			
+			} else if(action.equals("foreachInsert")) {
+				List<MemberVO> memList = new ArrayList();
+				memList.add(new MemberVO("m1", "1234", "박길동", "m1@test.com"));
+				memList.add(new MemberVO("m2", "1234", "이길동", "m2@test.com"));
+				memList.add(new MemberVO("m3", "1234", "삼길동", "m3@test.com"));
+				memList.add(new MemberVO("m4", "1234", "사길동", "m4@test.com"));
+				
+				int result = dao.foreachInsert(memList);	// SQL문으로 memList를 전달
+				nextPage="/mem4.do?action=listMembers";
 			}
 			
 		} catch(Exception e) {
