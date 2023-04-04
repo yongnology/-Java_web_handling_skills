@@ -105,9 +105,22 @@ public class MemberServlet extends HttpServlet{
 				String id= request.getParameter("id");
 				dao.deleteMember(id);
 				nextPage="/mem4.do?action=listMembers";
+			
+			} else if(action.equals("searchMember")) {
+				String name= request.getParameter("name");
+				String email= request.getParameter("email");
+				memberVO.setName(name);
+				memberVO.setEmail(email);
+				
+				List<MemberVO> membersList = dao.searchMember(memberVO);
+				request.setAttribute("membersList", membersList);
+				System.out.println("■■■■■■■■■■■■■■■■■■■■■■■ searchMember ■■■■■■■■■■■■■■■■■■■■■■■");
+				System.out.println(membersList);
+				nextPage="/test03/listMembers.jsp";
 			}
 			
 		} catch(Exception e) {
+			System.out.println("■■■■■■■■■■■■■■■■■■■■■■■오류 발생 ■■■■■■■■■■■■■■■■■■■■■■■■■");
 			e.printStackTrace();
 			System.out.println("해당조건의 회원정보 없음");
 			List<MemberVO> membersList = dao.selectAllMemberList();

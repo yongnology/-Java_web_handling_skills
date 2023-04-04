@@ -71,6 +71,22 @@
 		]]>
 	</delete>
 	
+	<!-- 동적 SQL문 -->
+	<select id="searchMember" parameterType="memberVO" resultMap="memResult">
+		<![CDATA[
+			SELECT * FROM t_member
+		]]>
+      <where>
+         <if test=" name != ''  and  name != null">
+            name=#{name}
+         </if>
+         <if test="email != ''  and email != null ">
+           and email = #{email}
+         </if>
+      </where>
+		order by joinDate desc
+	</select>
+	
 	<select id="selectName" resultType="String">
 		<![CDATA[
 			SELECT name FROM t_member
