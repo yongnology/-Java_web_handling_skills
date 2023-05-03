@@ -26,7 +26,7 @@
 		<c:forEach var="imageFileName" items="${map.fileList }">
 			<tr>
 				<td>
-						<img src="${contextPath }/download?imageFileName=${imageFileName}">
+						<img src="${contextPath }/download2?imageFileName=${imageFileName}">
 				</td>
 			</tr>
 		</c:forEach>
