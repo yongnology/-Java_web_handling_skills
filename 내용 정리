@@ -1226,3 +1226,8 @@ mailController.java 에서
     - mailService.sendPreConfiguredMail 에서 메일 내용 입력
 
 ----------------------------------------------
+28.4 HTML 형식 메일 보내기
+StringBuffer 를 사용하여 append 하여 메일 내용에 html 형식을 추가하고. toString으로 문자로 만들어서
+sendMail 메소드로 보내기
+
+----------------------------------------------
