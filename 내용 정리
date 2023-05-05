@@ -1215,3 +1215,14 @@ defaultEncoding : 전달되는 매개변수의 인코딩을 설정
 28.2 썸네일 이미지 사용하기
 
 ----------------------------------------------
+28.3 스프링 이메일 사용하기
+
+스프링에서는 이메일 기능도 설정만으로 쉽게 구현할 수 있다.
+google에서 제공하는 SMTP 서버를 이용해 메일을 보는 실습.
+
+mail-context.xml 에서 발송할 google 아이디 정보를 입력
+    - <property name="subject" value="메일 제목 입력" />
+mailController.java 에서
+    - mailService.sendPreConfiguredMail 에서 메일 내용 입력
+
+----------------------------------------------
